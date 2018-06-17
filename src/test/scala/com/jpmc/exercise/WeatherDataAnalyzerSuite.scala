@@ -59,7 +59,7 @@ class WeatherDataAnalyzerSuite extends BaseSuite {
     assertDataFrameEquals(actualRankingWithColumnTypeCasted, expectedRanking)
   }
 
-  test("When was the worse rainfall for each station"){
+  test("Worst rainfall year and month for each station"){
     Given("list of stations")
     val stationListFile = "station-list.dat"
 
@@ -75,7 +75,7 @@ class WeatherDataAnalyzerSuite extends BaseSuite {
     assertDataFrameEquals(actualWorstRainfallYearAndMonthByStationColumnTypeCasted, expectedWorstRainfallYearAndMonthByStation)
   }
 
-  test("When was the best sunshine for each station"){
+  test("Best sunshine year and month for each station"){
     Given("list of stations")
     val stationListFile = "station-list.dat"
 
