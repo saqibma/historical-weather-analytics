@@ -14,10 +14,11 @@ Please go through the following points before running the application.
 9) WeatherDataAnalyzer load method saves transformed dataframes as csv files(with header) under the output
    folder specified as an argument to the main program.
 10) Integration testing was done in a BDD style for each transformations asked in the exercise.
-    Please refer WeatherDataAnalyzerSuite class.
-11) Transformed dataframes are being validated against the pre-calculated results present in csv files under
+    Please refer WeatherDataAnalyzerSuite.scala class.
+11) Please run WeatherDataAnalyzerSuite.scala class in order to test all the transformations.
+12) Transformed dataframes are being validated against the pre-calculated results present in csv files under
     src\test\resources directory as a part of the integration test
-11) A generic spark based test framework was designed and developed to test all kinds of RDDs and data frames.
+13) A generic spark based test framework was designed and developed to test all kinds of RDDs and data frames.
 Please refer BaseSuite.scala class for the detail implementation.
-12) pom.xml file was updated to create a jar with dependencies called uber jar.
+14) pom.xml file was updated to create a jar with dependencies called uber jar.
 
