@@ -24,7 +24,7 @@ class WeatherDataAnalyzer(val spark: SparkSession) extends Serializable {
         cleanedMeasures.map(rec => {
           val measures = rec.split("\\s+")
           measures.length match {
-            case 8 => WeatherData(station,
+            case x if x >= 8 => WeatherData(station,
               removeIncosistencies(measures(1)),
               removeIncosistencies(measures(2)),
               removeIncosistencies(measures(3)),
@@ -40,6 +40,7 @@ class WeatherDataAnalyzer(val spark: SparkSession) extends Serializable {
               removeIncosistencies(measures(5)),
               removeIncosistencies(measures(6)),
               null)
+            case _ => WeatherData(station,null,null,null,null,null,null,null)
           }
 
         })
